@@ -1,20 +1,31 @@
-ol {
-    background-color: rgb(129, 202, 34);
+.list {
+    background-color: greenyellow;
+}
+
+#title-1 {
+    font-size: 180%
+}
+
+#title-2 {
+    font-variant: small-caps;
 }
 
 
-#JS img{
+div img {
     width:10%;
     height:10%;
     border-radius: 360px;
+    border-style: solid BLACK;
 }
+
+p + ul {
+    list-style-type: none;
+}
+
+p ~ p {
+    text-align: right;
+}   
 
 ul > li {
-    list-style-type: none;
-    letter-spacing: 5px;
-}
-
-
-p {
-    font-family: sans-serif;
+    letter-spacing: 10px;
 }
