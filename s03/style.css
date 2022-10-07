@@ -1,0 +1,77 @@
+?*universal selector*/
+*{
+    font-family: 'lobster', cursive;
+}
+
+
+
+h1{
+    color: brown;
+}
+
+span{
+    color: blueviolet;
+}
+
+/*id selector*/
+
+#title-1 {
+    color: aqua;
+}
+
+/*class selector*/
+
+.title-2 {
+    color: #8E00FE;
+    text-align: center
+}
+
+/*attribute selector*/
+
+input[type="text"] {
+    background color: aquamarine;
+}
+
+/*Combinator Selector
+
+    Descendant Selector
+    - white spaces
+    -selects/targets "all elements" that matches the specified elements
+/* 
+    Syntax: first element child element { 
+        property: value
+    }
+*/
+
+div p {
+    background-color: red;
+}
+
+/* child Selector
+    - selects/targets "all" elements that are a;; "children" of a specified element
+*/
+
+div > p {
+    background-color: chocolate;
+}
+
+/*adjacent sibling selector (+)
+    -selects/target an element that is directly after the first selector
+*/ 
+
+p + p {
+    background-color: maroon;
+}
+
+div + p {
+    background-color: #e2288d;
+}
+
+/*
+General sibling selector
+*/
+
+p ~ p {
+    background-color: #e2288d;
+}
+
