@@ -1,0 +1,47 @@
+/*
+flexbox
+ - one dimensional layout
+    - row
+    - column
+
+**Properties to use depends on flex declaration
+    display: flex;
+    -justify-content
+    -flex-direction
+    -flex-wrap
+    -align-items
+
+*/
+
+.flex-container {
+    background-color: lightblue;
+    height: 300px;
+    padding: 20px;
+    display: flex; /*important when using properties*/
+
+    /* justify-content:<flex-property> */
+
+    justify-content: flex-start; /*default property */
+    justify-content: center; /*align items in center */
+    justify-content: flex-end; /*align items at the end*/
+    justify-content: space-between; /*spaces are distributed evenly*/
+    justify-content: space-around; /*spaces are distributed around each item*/
+    justify-content: space-evenly; /*spaces are disctributed in-between item*/
+    
+    flex-direction: row; /*default property/ displayed horizontal */
+    flex-direction: column; /*displayed as vertical */
+    flex-direction: row-reverse; /*reverse item horizontally*/
+    flex-direction: column-reverse; /*reverse item vertically */
+    
+    flex-wrap: nowrap; /*default*/
+    flex-wrap: wrap-reverse; /*wrap text reverse item */
+
+    align-items: flex-start;
+    align-items: stretch;
+    align-items: flex-end; /* aligns item horizontally at the bottom*/
+    align-items: center; /*no overlap made in justify-content: center, items itself moved to center 
+
+    Note: flex-property recognized, last property declared (coded)
+    */
+
+}

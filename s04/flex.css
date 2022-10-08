@@ -1,0 +1,32 @@
+/*
+flexbox
+ - one dimensional layout
+    - row
+    - column
+
+**Properties to use depends on flex declaration
+    display: flex;
+    -justify-content
+    -flex-direction
+    -flex-wrap
+    -align-items
+
+*/
+
+.flex-container {
+    background-color: lightblue;
+    height: 300px;
+    padding: 20px;
+    display: flex; /*important when using properties*/
+
+    /* justify-content:<flex-property> */
+
+    align-items: flex-start 
+
+
+
+
+
+
+
+}

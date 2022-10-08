@@ -32,3 +32,47 @@ span {
 
     display: block;
 }
+    /*display properties 
+    syntax: display: properties
+        -block: elements move in the next line 
+                occupies entire horizontal line 
+        
+        -inline: stays in the horizontal director
+
+        -inline-block: stays in the horizontal line, 
+                does not affect whole horizontal line 
+                but spacing from top to bottom are changed
+    */
+
+.container {
+    background-color: lightgreen;
+    margin: 20px;
+    margin-top: 40px;
+    border: 10px solid purple;
+    padding: 20px;
+}
+
+h1 {
+    display: block;
+    margin: 15px;
+    background-color: lightsalmon;
+    padding: 15px;
+    border: 10px dashed gray
+}
+
+.third {
+    margin-top: 40px
+}
+
+a {
+    background-color: lightseagreen;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
