@@ -6,9 +6,25 @@ ul {
 
     /*overflow - controls what happens to the content that is too big to fit into the area
         Properties: 
-            hidden
-            visible
-            scroll
-            auto
 
+            hidden - hides the rest of the content
+            visible - it shows all the contents
+            scroll - creates scrollbox when the content is overflowed
+            auto - when needed, creates a scrollbox
+    */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    padding: 8px;
+    background-color: green;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: greenyellow;
 }
