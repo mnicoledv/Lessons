@@ -1,0 +1,63 @@
+.staticPosition {
+    border: 2px solid #7a08ff;
+    top: 10px; /* top, bottom, left, and right this is set as default*/
+}
+
+.RelativePosition {
+    position: relative;
+    border: 2px solid #0303fb;
+    left: 150px;
+}
+
+.absoluteposition {
+    position: absolute;
+    border: 2px solid #ad7c01;
+    width:300px;
+    top: 320px;
+}
+
+.fixedposition {
+    position: fixed;
+    border: 2px solid #540055;
+    top: 300px
+}
+
+.stickyposition {
+    position: -webkit-sticky; /*Safari*/
+    position: sticky; 
+    border: 3px solid #218700;
+    top: 50px;
+    left: 20px;
+    padding: 5px;
+
+}
+
+img {
+    width: 150px;
+    height: 100px;
+}
+
+img .staticPosition {
+    position: static
+    /*even when not declared it still show the same position bec. its default in nature*/
+}
+
+img .RelativePosition {
+    top: 200px;
+}
+
+.snoopyfixed{
+    position: fixed;
+    top: 660px;
+    padding-left: 500px;
+    height: auto;
+    width: 150px;
+    border: 2px solid gold;
+}
+
+.buttonclick{
+    position: fixed;
+    top: 700px;
+    margin-top: 400px;
+    height: auto;
+}

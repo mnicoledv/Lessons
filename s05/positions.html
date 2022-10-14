@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="positions.css">
+
+</head>
+<body>
+
+    <h1>Sentence examples</h1>
+
+    <h2>Static Position</h2>
+    <p class="staticPosition">
+        The quick brown fox jumps over the lazy dog.
+    </p>
+
+    <h2>Relative position</h2>
+    <p class="RelativePosition">
+        The quick brown fox jumps over the lazy dog.
+    </p>
+
+    <h2>Absolute position</h2>
+   <div>
+        <p class="relativeposition">Sentence</p>
+        <div>
+            <p class="absoluteposition">
+                The quick brown fox jumps over the lazy dog
+            </p>
+        </div>
+   </div>
+
+   <h2>Fixed Position</h2>
+   <p class="fixedposition">
+    The quick brown fox jumps over the lazy dog.
+   </p>
+
+   <h2>Sticky Position</h2>
+
+   <div class="stickyposition">
+    The quick brown fox jumps over the lazy dog.
+   </div>
+
+    <h1>Playing with Snoopy</h1>
+    <p>
+        <h2>Static Position</h2>
+        <img class="staticPosition" src="snoopy.jpg">
+    </p>
+
+    <p>
+        <h2>Relative Position</h2>
+        <img class="relativePosition" src="snoopy.jpg">
+    </p>
+
+    <p>
+        <h2>Fixed Position</h2>
+        <img class="snoopyfixed" src="snoopy.jpg">
+    </p>
+
+    <p>
+        <h2>Another Fixed Position</h2>
+
+        <button class="buttonClick" onClick="tada()">Click Me!</button>
+        <img class="snoopyfixed" src="snoopy.jpg">
+    </p>
+
+    <!--Script tags must be at the top of </body > closing tag-->
+
+    <script>
+        function tada()
+        {
+            alert("Tada");
+
+        }
+    </script>
+</body>
+</html>
