@@ -64,12 +64,110 @@ button:hover {
     background-color: rgba(117, 185, 185, .8);
 }
 
-img {
-    border-radius: 50%;
-    width: 300px;
+footer {
+    background-color: #24252A;
+    padding: 7px;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+container {
+    width: 80%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    padding-top: 100px;
+}
+
+content-section {
+    float: left;
+    width: 55%;
+
+}
+
+image-section {
+    float: right;
+    width: 40%;
+}
+
+image-section img{
+    height: auto;
+    width: 100%;
+    border-radius: 100px;
+}
+
+content h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: rgba(117, 185, 185, .8);
+}
+
+content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 25px;
+}
+
+content p{
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ada1 img{
+    float: right;
+    width: 50%;
+    height: auto;
+}
+
+.title {
+    float: left;
+    width: 50%;
+    border: none;
+    padding: 40px;
+    justify-content: center;
+    color: rgba(117, 185, 185, 1);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 0;
+    font-size: 25px;   
 }
 
 figcaption {
@@ -79,17 +177,25 @@ figcaption {
 }
 
 p {
-    border: none;
+    margin-top: 10px;
     padding: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    float: left;
 }
 
 footer {
-    background-color: pink;
-    padding: 7px;
-    color: red;
-    font-family: cursive;
+    background-color: #24252A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #c2c2c2;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
+    padding: 8px;
 }
