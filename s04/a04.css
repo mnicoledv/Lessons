@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    passing: 0;
+    box-sizing: border-box;
+}
+
+header{
+    border: 2px solid black;
+    width: 800px;
+    height:150x;
+    position: relative;
+}
+
+header .logo {
+    background-color: lightpink;
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+header .topmenu {
+    background-color: lightpink;
+    display: inline-block;
+    float: right;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+header .menu {
+    background-color: lightpink;
+    width: 500px;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid black;
+}
