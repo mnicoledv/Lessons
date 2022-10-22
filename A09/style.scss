@@ -1,0 +1,21 @@
+$ce
+
+
+$background-color:  rgb(255, 255, 144);
+$loginbg-color: white;
+$text-color: #2691d9
+$font-size:
+    "simple": 20px,
+    "medium": 25px,
+
+
+
+
+body {
+    background-color: rgb(255, 255, 144);
+}
+
+.main {
+    width: 400px;
+    background: $background-color;
+}
