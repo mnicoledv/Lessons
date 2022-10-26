@@ -1,4 +1,110 @@
-body {
-    background-image: ("images/login.png");
+$background: url("images/login.png");
 
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$breakpoint: map-get($breakpoints, sm); 
+
+$breakpoint: map-get($breakpoints, md);
+
+$breakpoint: map-get($breakpoints, lg); 
+
+$breakpoint: map-get($breakpoints, xl); 
+
+$breakpoint: map-get($breakpoints, xxl); 
+
+@mixin respond-above($breakpoint) {
+
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+  
+    } @else {
+  
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+
+  @include respond-above(sm) {
+    .card {
+      display: block;
+    }
+  }
+
+@mixin respond-below ($breakpoint){
+
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+
+  } @else {
+
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
 }
+
+@include respond-below(lg) {
+    .card {
+      display:block;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@mixin respond-between($lower, $upper) {
+
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+  
+      $lower-breakpoint: map-get($breakpoints, $lower);
+      $upper-breakpoint: map-get($breakpoints, $upper);
+
+      @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+        @content;
+      }
+    
+    } @else {
+  
+      @if (map-has-key($breakpoints, $lower) == false) {
+  
+        @warn 'Your lower breakpoint was invalid: #{$lower}.';
+      }
+
+      @if (map-has-key($breakpoints, $upper) == false) {
+  
+        @warn 'Your upper breakpoint was invalid: #{$upper}.';
+      }
+    }
+  }
+
+  @include respond-between(sm, xxl) {
+    .card img{
+      display: block;
+      height: 100%;
+    }
+  }
+
+body {
+    background: $background;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 50;
+}
+

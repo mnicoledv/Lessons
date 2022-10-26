@@ -1,0 +1,25 @@
+@media (min-width: 576px) {
+  .img {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 1399px) {
+  .img {
+    display: block;
+    height: 100%;
+    
+  }
+}
+body {
+  background: url("images/login.png");
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 50;
+}
