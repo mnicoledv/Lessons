@@ -1,62 +1,99 @@
-
-body{
-  min-height: 100vh;
-}
-
-.footer {
-  padding:40px 0;
-}
-
-.footer .social {
-  padding-bottom: 25px;
-}
-
-.social a{
-  font-size: 25px;
-  width: 30px;
-  height: 40px;
-  line-height: 40px;
-  display: inline-block;
-}
-
-.social a:hover{
-  opacity: 0.9;
-}
-
-.col ul {
-  padding:40px;
-  list-style: none;
-  font-size: 20px;
-  line-height: 2;
-}
-
-.col ul li a {
-  color: inherit;
-  text-decoration: none;
-}
-
-
-
-
-
-
 @media (min-width: 576px) {
-  .card {
-    display: block;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 40px 0;
+  }
+  .footer .social {
+    padding-bottom: 25px;
+  }
+  .social a {
+    font-size: 25px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+  }
+  .social a:hover {
+    opacity: 0.9;
+  }
+  .col ul {
+    padding: 40px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 2;
+  }
+  .col ul li a {
+    color: inherit;
+    text-decoration: none;
   }
 }
 @media (max-width: 991px) {
-  .card {
-    display: block;
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 40px 0;
   }
-  img {
-    width: 100%;
-    height: auto;
+  .footer .social {
+    padding-bottom: 25px;
+  }
+  .social a {
+    font-size: 25px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+  }
+  .social a:hover {
+    opacity: 0.9;
+  }
+  .col ul {
+    padding: 40px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 2;
+  }
+  .col ul li a {
+    color: inherit;
+    text-decoration: none;
   }
 }
 @media (min-width: 576px) and (max-width: 1399px) {
-  .card img {
-    display: block;
-    height: 100%;
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 40px 0;
+  }
+  .footer .social {
+    padding-bottom: 25px;
+  }
+  .social a {
+    font-size: 25px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+  }
+  .social a:hover {
+    opacity: 0.9;
+  }
+  .col ul {
+    padding: 40px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 2;
+  }
+  .col ul li a {
+    color: inherit;
+    text-decoration: none;
   }
 }

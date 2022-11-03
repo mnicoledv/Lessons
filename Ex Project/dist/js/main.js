@@ -3,15 +3,21 @@
 const preloadWrap = document.querySelector ('.preloader-wrapper');
 
     // const - constant - not a reassignable variable
+    //preLoadWrap is a user-defined variable
     // querySelector - returns the 1st element that matches a css selector
+    
 
 //step 2: Create an event listener
 
     //Event listener - attaches an event handler to a document
 
     /*
-        Syntax: window.addEventlistener(event, function)
+        Syntax: window.addEventlistener(event, function () {
+            content;
+        })
+        
         event - eliminates the use of prefix "on"
+        onload - load
         function - runs when an event occurs
          
     */

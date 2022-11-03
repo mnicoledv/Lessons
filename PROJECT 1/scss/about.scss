@@ -1,0 +1,151 @@
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+
+
+$breakpoint: map-get($breakpoints, sm); // Get the small breakpoint.
+
+$breakpoint: map-get($breakpoints, md); // Get the medium breakpoint.
+
+$breakpoint: map-get($breakpoints, lg); // Get the large breakpoint.
+
+$breakpoint: map-get($breakpoints, xl); // Get the xlarge breakpoint.
+
+$breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint.
+
+
+@mixin respond-above($breakpoint) { 
+  
+  //respond above - breakpoints above designated value
+  //respond below - breakpoints below designated value
+
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+  
+    } @else {
+  
+  
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+
+  @include respond-above(sm) {
+    .card {
+      display: block;
+    }
+  }
+
+@mixin respond-below ($breakpoint){
+
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+
+  } @else {
+
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@include respond-below(lg) {
+    .card {
+      display:block;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+@mixin respond-between($lower, $upper) {
+
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+  
+      $lower-breakpoint: map-get($breakpoints, $lower);
+      $upper-breakpoint: map-get($breakpoints, $upper);
+  
+      @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+        @content;
+      }
+    
+    } @else {
+  
+      @if (map-has-key($breakpoints, $lower) == false) {
+  
+        @warn 'Your lower breakpoint was invalid: #{$lower}.';
+      }
+  
+      @if (map-has-key($breakpoints, $upper) == false) {
+  
+        @warn 'Your upper breakpoint was invalid: #{$upper}.';
+      }
+    }
+  }
+
+  @include respond-between(sm, xxl) {
+    .card img{
+      display: block;
+      height: 100%;
+    }
+  }
+
+ 
+.card-group {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 6rem;
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding:40px 0;
+  }
+  
+  .footer .social {
+    padding-bottom: 25px;
+  }
+  
+  .social a{
+    font-size: 25px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+  }
+  
+  .social a:hover{
+    opacity: 0.9;
+  }
+  
+  .col ul {
+    padding:40px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 2;
+  }
+  
+  .col ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  
