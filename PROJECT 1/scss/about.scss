@@ -1,3 +1,61 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: wheat;
+  min-height: 100vh;
+  display: block;
+  padding: auto;
+  margin: auto;
+}
+
+.container .row {
+  display: flex;
+  flex-direction: column;
+  padding: auto;
+  margin: auto;
+
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  }
+
+.footer .social {
+padding-bottom: 25px;
+}
+
+.social a{
+font-size: 25px;
+width: 30px;
+height: 40px;
+line-height: 40px;
+display: inline-block;
+}
+
+.social a:hover{
+opacity: 0.9;
+}
+
+.col ul {
+padding:40px;
+list-style: none;
+font-size: 20px;
+line-height: 2;
+}
+
+.col ul li a {
+color: inherit;
+text-decoration: none;
+}
+
+
 $breakpoints: (
     xs: 0,
     sm: 576px,
@@ -6,7 +64,6 @@ $breakpoints: (
     xl: 1200px,
     xxl: 1400px
 );
-
 
 
 $breakpoint: map-get($breakpoints, sm); // Get the small breakpoint.
@@ -22,8 +79,6 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
 
 @mixin respond-above($breakpoint) { 
   
-  //respond above - breakpoints above designated value
-  //respond below - breakpoints below designated value
 
     @if map-has-key($breakpoints, $breakpoint) {
   
@@ -40,10 +95,100 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
     }
   }
 
-  @include respond-above(sm) {
-    .card {
+  @include respond-above(md) {
+    
+    body {
+      background: wheat;
+      min-height: 100vh;
       display: block;
+      padding: auto;
+      margin: auto;
     }
+
+    .about-1{
+      margin: 30px;
+      padding: 5px;
+    }
+
+    .about-1 h1{
+      text-align: center;
+    }
+
+    .about-1 p{
+      text-align: center;
+      padding: 3px;
+      font-size: 30px;
+    }
+
+    .about-item{
+      height: 350px;
+      width: auto;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 80px, 30px;
+      background-color: white;
+      box-shadow: 0 0 9px rgba(0,0,0,.1);
+    }
+
+    .about-item  i{
+      font-size: 43px;
+      margin: 0;
+    }
+
+    .about-item h3{
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .about-item hr{
+      width: 46px;
+      height: 3px;
+      background-color: wheat;
+      margin: 0 auto;
+      border: none;
+    }
+
+    .about-item p{
+      margin-top: 20px;
+    }
+
+    .about-item:hover .bi{
+      background: none;
+      color: wheat;
+      transform: scale(1);
+    }
+    
+    .contact-info {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card p{
+      margin-top: 20px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      max-height: 0;
+      opacity: 0;
+      transition: 0.3 linear;
+    }
+    
+    .card:hover p{
+      max-height: 40px;
+      opacity: 1;
+    }
+
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      }
+
+    .container .row {
+        display: flex;
+        flex-direction: row;
+      }
   }
 
 @mixin respond-below ($breakpoint){
@@ -62,18 +207,12 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
   }
 }
 
-@include respond-below(lg) {
-    .card {
-      display:block;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
+@include respond-below(xxl) {
+  .contact-info {
+    flex-direction: column;
+  }
 
 }
-
 
 @mixin respond-between($lower, $upper) {
 
@@ -101,51 +240,8 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
   }
 
   @include respond-between(sm, xxl) {
-    .card img{
-      display: block;
-      height: 100%;
+   
+    
     }
-  }
-
- 
-.card-group {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 6rem;
-  }
-  
-  .footer {
-    position: absolute;
-    bottom: 0;
-    padding:40px 0;
-  }
-  
-  .footer .social {
-    padding-bottom: 25px;
-  }
-  
-  .social a{
-    font-size: 25px;
-    width: 30px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-  }
-  
-  .social a:hover{
-    opacity: 0.9;
-  }
-  
-  .col ul {
-    padding:40px;
-    list-style: none;
-    font-size: 20px;
-    line-height: 2;
-  }
-  
-  .col ul li a {
-    color: inherit;
-    text-decoration: none;
-  }
   
   

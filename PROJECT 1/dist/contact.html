@@ -12,58 +12,56 @@
     <link rel="stylesheet" href="../dist/css/contact.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <a class="navbar-brand" href="../dist/index.html">Match-Book in Heaven</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../dist/index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../dist/About.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../dist/Store.html">Store</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="../dist/Contact.html">Contact Us</a>
-                  </li>
-                </ul>
-                <form class="d-flex " role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search for books by keyword / title / Author" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                    
-                  </form>
-              </div>
-            </div>
-          </nav>
-
-          <section>
-            <p class="h1 text-center mt-3 p-5">Contact Us</p>
+  <div class="min-vh-100 d-flex flex-column justify-content-between">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../dist/index.html">
+          <img src="../dist/images/logo.png" alt="match-book logo" width="150" height="90">
+        </a>
+        <div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>  
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../dist/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../dist/About.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../dist/Store.html">Store</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../dist/Contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+     <!-- <div class="filter-box p-2">
+        <a href="#" class="btn active" data-filter="all">All</a>
+        <a href="#" class="btn" data-filter="Books">Books</a>
+        <a href="#" class="btn" data-filter="ArtMaterials">Art Materials</a>
+      </div> 
+     --> 
+    </nav>
             
-            <div class="contact-info">                
+            <p class="h1 text-center mt-3 p-5">Contact Us</p>
+            <div class="container contact-info">                
               
-                <div class="card p-2" action="mailto: mnicoledv@gmail.com" method="GET">
+              <div class="card p-2 mb-3" action="mailto: mnicoledv@gmail.com" method="GET">
                   <a style= "color:inherit" href="mailto: mnicoledv@gmail.com"><i class="card-icon bi bi-envelope-fill text-center"></i></a>
                   <p class="text-center">match-book@mail.com</p>
-                </div>
-              
-
-              <div class="card p-2">
+              </div>
+              <div class="card p-2 mb-3">
                 <i class="card-icon bi bi-telephone text-center"></i>
                 <p class="text-center">(02) 481-9184</p>
               </div>
-
-              <div class="card p-2">
+              <div class="card p-2 mb-3">
                 <i class="card-icon bi bi-geo-alt-fill text-center"></i>
                 <p class="text-center">
                   4262 Blue Diamond rd <br>
@@ -71,13 +69,12 @@
                   North Carolina, United States<br>
                 </p>
               </div>
+
+              
             </div>  
-        </section>
-      
-
-        <footer class="text-center bg-light mt-5">
-
-          <div class="row align-items-center mt-3">
+      <div class="footer text-center bg-light p-3 mt-5" style="padding-bottom: 2.5rem;">
+        <div class="container align-items-center mt-3">
+          <div class="row">
             <div class="footer-col col">
               <p>
                 <h5>CONNECT WITH US</h5>
@@ -118,7 +115,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
-                        Thank you for subcribing! Check out our latest updates & promos in your email.
+                        Thank you for subscribing! Check out our latest updates & promos in your email.
                       </div>
                     </div>
                   </div>
@@ -145,14 +142,16 @@
           </div>
     
           <!--ALT+0169-->
-          <div class="copywright p-3">
-            © WD26 - marionnicoleDV. 2022 All Rights Reserved.
+          <div class="row copywright p-3 ">
+            <p class="text-center">© WD26 - marionnicoleDV. 2022 All Rights Reserved.</p>
           </div>  
-        </footer>
-    
+        <!--</footer>-->
+        </div>
+      </div> 
+  </div>  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     
-        <!-- Start of ChatBot (www.chatbot.com) code -->
+        <!-- Start of ChatBot (www.chatbot.com) code
         <script type="text/javascript">
           window.__be = window.__be || {};
           window.__be.id = "635a22aa7a2b94000739d27e";
@@ -162,7 +161,7 @@
               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
           })();
         </script>
-        <!-- End of ChatBot code -->
+         End of ChatBot code -->
     
     </body>
     </html>

@@ -1,3 +1,76 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+  }
+
+  body {
+    background: wheat;
+  }
+
+  .container .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-group {
+    margin: 0 auto;
+    padding: 3rem 2rem;
+
+  } 
+  .card {
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    padding: auto;
+    margin-bottom: 5px;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+    background: white;
+  }
+
+  .card img {
+    height: 450px;
+      
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    }
+  
+  .footer .social {
+  padding-bottom: 25px;
+  }
+  
+  .social a{
+  font-size: 25px;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  }
+  
+  .social a:hover{
+  opacity: 0.9;
+  }
+  
+  .col ul {
+  padding:40px;
+  list-style: none;
+  font-size: 20px;
+  line-height: 2;
+  }
+  
+  .col ul li a {
+  color: inherit;
+  text-decoration: none;
+  }
+
 
 $breakpoints: (
     xs: 0,
@@ -85,40 +158,23 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
     transform: scale(0.9);
   }
 
+  .contact-info {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
   .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    padding:40px 0;
-  }
-  
-  .footer .social {
-    padding-bottom: 25px;
-  }
-  
-  .social a{
-    font-size: 25px;
-    width: 30px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-  }
-  
-  .social a:hover{
-    opacity: 0.9;
-  }
-  
-  .col ul {
-    padding:40px;
-    list-style: none;
-    font-size: 20px;
-    line-height: 2;
-  }
-  
-  .col ul li a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
+    width: 100%;
+    }
+
+  .container .row {
+      display: flex;
+      flex-direction: row;
+    }
   
   }
 
@@ -139,25 +195,6 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
 }
 
 @include respond-below(lg) {
-  .card {
-    height: auto;
-    width: fit-content;
-    box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
-    background: white;
-    cursor: pointer; 
-  }
-
-  .card img {
-    height: 450px;
-    outline: .1rem solid #ccc;
-    outline-offset: -1.5rem;
-      
-  }
-
-  .card img:hover {
-    outline: .2rem solid #222;
-    outline-offset: 0;
-  }
 
 }
 
@@ -188,11 +225,7 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
   }
 
   @include respond-between(sm, xxl) {
-    .card img{
-      display: block;
-      height: auto;
-      width: fit-content;
-    }
+
   }
   
 
