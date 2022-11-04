@@ -1,0 +1,102 @@
+@media (min-width: 576px) {
+  .cards-wrapper {
+    align-items: center;
+    display: flex;
+    height: 800px;
+    width: 1000px;
+  }
+  .card-img-top {
+    width: 200;
+    height: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .cards-wrapper {
+    display: flex;
+  }
+  .card-img-top {
+    height: 350px;
+  }
+}
+@media (min-width: 576px) and (max-width: 1399px) {
+  .container {
+    width: 350px;
+    height: 500px;
+  }
+  .card {
+    margin: 0 0.5em;
+    height: 350px;
+    width: 200px;
+  }
+  .cards-wrapper {
+    display: flex;
+  }
+  .card-img-top {
+    display: flex;
+  }
+}
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY("180deg");
+}
+
+.front, .back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgb(50, 50, 0);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card .front {
+  background-image: url("/dist/images/covered book.jpg");
+  background-repeat: no-repeat;
+  background-size: 350px 500px;
+}
+
+.card .back {
+  background-color: white;
+  transform: rotateY("180deg");
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 40px 0;
+}
+
+.footer .social {
+  padding-bottom: 25px;
+}
+
+.social a {
+  font-size: 25px;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+}
+
+.social a:hover {
+  opacity: 0.9;
+}
+
+.col ul {
+  padding: 40px;
+  list-style: none;
+  font-size: 20px;
+  line-height: 2;
+}
+
+.col ul li a {
+  color: inherit;
+  text-decoration: none;
+}
