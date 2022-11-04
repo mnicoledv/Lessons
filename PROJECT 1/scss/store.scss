@@ -56,6 +56,10 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
   body {
     background: wheat;
   }
+
+  .d-flex {
+    justify-content: space-between;
+  }
   
   .card-group {
     max-width: 1200px;
@@ -66,6 +70,7 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
   } 
     
   .card {
+    display: block;
     height: auto;
     box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
     background: white;
@@ -136,6 +141,7 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
 @include respond-below(lg) {
   .card {
     height: auto;
+    width: fit-content;
     box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
     background: white;
     cursor: pointer; 
@@ -185,6 +191,7 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
     .card img{
       display: block;
       height: auto;
+      width: fit-content;
     }
   }
   

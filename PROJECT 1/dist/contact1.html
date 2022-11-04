@@ -48,37 +48,57 @@
           </nav>
 
           <section>
-            <p class="h1 text-center mt-3 p-5">Contact Us</p>
-            
-            <div class="contact-info">                
-              
-                <div class="card p-2" action="mailto: mnicoledv@gmail.com" method="GET">
-                  <a style= "color:inherit" href="mailto: mnicoledv@gmail.com"><i class="card-icon bi bi-envelope-fill text-center"></i></a>
-                  <p class="text-center">match-book@mail.com</p>
-                </div>
-              
+            <div class="container">
+    
+              <p class="h1 text-center mt-3">Contact Us</p>
+                <!--Forms-->
+                
+                <form class="form-floating mt-3 ml-3" action="mailto: match-bookhvn@mail.com" method="GET">
+                   
+                    <div class="row mb-3">
+                        <label for="fname" class="col-sm-2 col-form-label" id="labels">First Name</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="fname" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="lname" class="col-sm-2 col-form-label" id="labels">Last Name</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="lname" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label" id="labels">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail3" required>
+                        </div>
+                    </div>
+    
+                    <div class="row-cols-auto mb-3">
+                      <label for="inquiry" class="col-sm-2 col-form-label" id="labels">How can we assist?</label>
+                      <div class="col-sm-10">
+                        <textarea name="message" id="inquiry" cols="100" rows="10" width="100%" required>
+    
+                        </textarea>
+                      </div>
+                    </div>                 
+                        <!-- Button trigger modal -->
 
-              <div class="card p-2">
-                <i class="card-icon bi bi-telephone text-center"></i>
-                <p class="text-center">(02) 481-9184</p>
-              </div>
+                      <button type="submit" class="btn btn-outline-dark mb-3">Book request?</button>
+                    
+                        <!--need fixin! make sure that when you click Subscribe, it will require you to input email-->
+                    </form>   
 
-              <div class="card p-2">
-                <i class="card-icon bi bi-geo-alt-fill text-center"></i>
-                <p class="text-center">
-                  4262 Blue Diamond rd <br>
-                  Suite #102-135<br>
-                  North Carolina, United States<br>
-                </p>
-              </div>
-            </div>  
+                    <button type="reset" class="btn btn-secondary mb-3">Clear</button>
+                </form>
+            </div>
         </section>
       
 
         <footer class="text-center bg-light mt-5">
 
           <div class="row align-items-center mt-3">
-            <div class="footer-col col">
+            <div class="col">
               <p>
                 <h5>CONNECT WITH US</h5>
               </p>
@@ -97,7 +117,7 @@
 
               </div>
             </div>
-            <div class="footer-col col">
+            <div class="col">
               <p>
                 <h5>NEWSLETTER</h5>
               </p>
@@ -126,7 +146,7 @@
                 </div>
             </div>
             </div>
-            <div class="footer-col col">
+            <div class="col">
               <ul>
                 <li class="">
                   <a class="" href="../dist/index.html">Home</a>
