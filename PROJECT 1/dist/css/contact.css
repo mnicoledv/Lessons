@@ -10,7 +10,14 @@ body {
   display: block;
 }
 
-.container .row {
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.footer .container .row {
   display: flex;
   flex-direction: column;
 }
@@ -86,6 +93,12 @@ body {
 }
 
 @media (min-width: 768px) {
+  .nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
+  }
   .contact-info {
     display: flex;
     width: 100%;
@@ -114,7 +127,7 @@ body {
     bottom: 0;
     width: 100%;
   }
-  .container .row {
+  .footer .container .row {
     display: flex;
     flex-direction: row;
   }

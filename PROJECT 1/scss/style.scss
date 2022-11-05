@@ -8,6 +8,13 @@
   transition: all .2s linear;
 }
 
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
 body {
   background: wheat;
 }
@@ -123,6 +130,14 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
   outline: none;
   border: none;
   text-decoration: none;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
+
   }
 
   body {

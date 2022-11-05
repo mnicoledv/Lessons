@@ -1,0 +1,82 @@
+
+  .container .card{
+    width: 100%;
+    height: 100%;
+    transition: transform 1500ms;
+    transform-style: preserve-3d
+  }
+
+  .container:hover > .card{
+    cursor: pointer;
+    transform: rotateY("180deg");
+  }
+  
+  .container .card .front, .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgb(50, 50, 0);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .container .card .front {
+    background-image: url("/dist/images/covered book.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 500px;
+  }
+  
+  .container .card .back {
+    background-color: white;
+    transform: rotateY('180deg');
+  }
+ 
+  .carousel-slide .carousel-inner .carousel-item .card {
+    margin:  0 .5em;
+    height: 350px;
+    width: 200px;
+  }
+
+  .cards-wrapper .card{
+      display: flex;
+
+  }
+
+  .card-img-top{
+      display: flex;
+
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding:40px 0;
+  }
+  
+  .footer .social {
+    padding-bottom: 25px;
+  }
+  
+  .social a{
+    font-size: 25px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+  }
+  
+  .social a:hover{
+    opacity: 0.9;
+  }
+  
+  .col ul {
+    padding:40px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 2;
+  }
+  
+  .col ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  

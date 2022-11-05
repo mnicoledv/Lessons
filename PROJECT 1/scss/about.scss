@@ -13,6 +13,13 @@ body {
   margin: auto;
 }
 
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
 .container .row {
   display: flex;
   flex-direction: column;
@@ -105,6 +112,13 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
       margin: auto;
     }
 
+    .nav-item {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 30px;
+      padding: 5px;
+    }
+   
     .about-1{
       margin: 30px;
       padding: 5px;

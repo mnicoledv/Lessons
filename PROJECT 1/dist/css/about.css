@@ -12,6 +12,13 @@ body {
   margin: auto;
 }
 
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
 .container .row {
   display: flex;
   flex-direction: column;
@@ -60,6 +67,12 @@ body {
     display: block;
     padding: auto;
     margin: auto;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
   }
   .about-1 {
     margin: 30px;

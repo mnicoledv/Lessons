@@ -12,7 +12,14 @@ body {
   display: block;
 }
 
-.container .row {
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.footer .container .row {
   display: flex;
   flex-direction: column;
 }
@@ -130,6 +137,13 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
 
   @include respond-above(md) {
     
+    .nav-item {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 30px;
+      padding: 5px;
+    }
+    
     .contact-info {
       display: flex;
       width: 100%;
@@ -163,7 +177,7 @@ $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint
       width: 100%;
       }
 
-    .container .row {
+    .footer .container .row {
         display: flex;
         flex-direction: row;
       }

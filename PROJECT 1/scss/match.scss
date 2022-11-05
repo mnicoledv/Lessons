@@ -1,10 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+body {
+  background: wheat;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.container .row {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-group {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+
+} 
+.card {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  padding: auto;
+  margin-bottom: 5px;
+  box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+  background: white;
+}
+
+.card img {
+  height: 450px;
+    
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  }
+
+.footer .social {
+padding-bottom: 25px;
+}
+
+.social a{
+font-size: 25px;
+width: 30px;
+height: 40px;
+line-height: 40px;
+display: inline-block;
+}
+
+.social a:hover{
+opacity: 0.9;
+}
+
+.col ul {
+padding:40px;
+list-style: none;
+font-size: 20px;
+line-height: 2;
+}
+
+.col ul li a {
+color: inherit;
+text-decoration: none;
+}
+
+
 $breakpoints: (
-    xs: 0,
-    sm: 576px,
-    md: 768px,
-    lg: 992px,
-    xl: 1200px,
-    xxl: 1400px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
 );
 
 
@@ -18,326 +99,149 @@ $breakpoint: map-get($breakpoints, lg); // Get the large breakpoint.
 $breakpoint: map-get($breakpoints, xl); // Get the xlarge breakpoint.
 
 $breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint.
-  
+
 
 @mixin respond-above($breakpoint) { 
-  
-  //respond above - breakpoints above designated value
-  //respond below - breakpoints below designated value
 
-    @if map-has-key($breakpoints, $breakpoint) {
-  
-      $breakpoint-value: map-get($breakpoints, $breakpoint);
-  
-      @media (min-width: $breakpoint-value) {
-        @content;
-      }
-  
-    } @else {
-  
-  
-      @warn 'Invalid breakpoint: #{$breakpoint}.';
-    }
-  }
-
-  @include respond-above(sm) {
-  
-    .container .card{
-      width: 100%;
-      height: 100%;
-      transition: transform 1500ms;
-      transform-style: preserve-3d
-    }
-
-    .container:hover > .card{
-      cursor: pointer;
-      transform: rotateY("180deg");
-    }
-    
-    .container .card .front, .back {
-      height: 100%;
-      width: 100%;
-      border-radius: 2rem;
-      box-shadow: 0 0 5px 2px rgb(50, 50, 0);
-      position: absolute;
-      backface-visibility: hidden;
-    }
-    
-    .container .card .front {
-      background-image: url("/dist/images/covered book.jpg");
-      background-repeat: no-repeat;
-      background-size: 350px 500px;
-    }
-    
-    .container .card .back {
-      background-color: white;
-      transform: rotateY('180deg');
-    }
-   
-    .carousel-slide .carousel-inner .carousel-item .card {
-      margin:  0 .5em;
-      height: 350px;
-      width: 200px;
-    }
-
-    .cards-wrapper .card{
-        display: flex;
-
-    }
-
-    .card-img-top{
-        display: flex;
-
-    }
-    .footer {
-      position: absolute;
-      bottom: 0;
-      padding:40px 0;
-    }
-    
-    .footer .social {
-      padding-bottom: 25px;
-    }
-    
-    .social a{
-      font-size: 25px;
-      width: 30px;
-      height: 40px;
-      line-height: 40px;
-      display: inline-block;
-    }
-    
-    .social a:hover{
-      opacity: 0.9;
-    }
-    
-    .col ul {
-      padding:40px;
-      list-style: none;
-      font-size: 20px;
-      line-height: 2;
-    }
-    
-    .col ul li a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-  }
-
-@mixin respond-below ($breakpoint){
+//respond above - breakpoints above designated value
+//respond below - breakpoints below designated value
 
   @if map-has-key($breakpoints, $breakpoint) {
 
     $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-    @media (max-width: ($breakpoint-value - 1)) {
+    @media (min-width: $breakpoint-value) {
       @content;
     }
 
   } @else {
 
+
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
 
+@include respond-above(sm) {
+  
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+body {
+  background: wheat;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+  padding: 5px;
+}
+
+.d-flex {
+  justify-content: space-between;
+}
+
+.card-group {
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 3rem 2rem;
+
+} 
+  
+.card {
+  display: block;
+  height: auto;
+  box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+  background: white;
+  cursor: pointer; 
+}
+
+.card img{
+  height: 500px;
+}
+
+.card img:hover {
+  transform: scale(0.9);
+}
+
+.contact-info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  }
+
+.container .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+@mixin respond-below ($breakpoint){
+
+@if map-has-key($breakpoints, $breakpoint) {
+
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @media (max-width: ($breakpoint-value - 1)) {
+    @content;
+  }
+
+} @else {
+
+  @warn 'Invalid breakpoint: #{$breakpoint}.';
+}
+}
+
 @include respond-below(lg) {
-
-
-  .container .card{
-    width: 100%;
-    height: 100%;
-    transition: transform 1500ms;
-    transform-style: preserve-3d
-  }
-
-  .container:hover > .card{
-    cursor: pointer;
-    transform: rotateY("180deg");
-  }
-  
-  .container .card .front, .back {
-    height: 100%;
-    width: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgb(50, 50, 0);
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  
-  .container .card .front {
-    background-image: url("/dist/images/covered book.jpg");
-    background-repeat: no-repeat;
-    background-size: 350px 500px;
-  }
-  
-  .container .card .back {
-    background-color: white;
-    transform: rotateY('180deg');
-  }
- 
-  .carousel-slide .carousel-inner .carousel-item .card {
-    margin:  0 .5em;
-    height: 350px;
-    width: 200px;
-  }
-
-  .cards-wrapper .card{
-      display: flex;
-
-  }
-
-  .card-img-top{
-      display: flex;
-
-  }
-  .footer {
-    position: absolute;
-    bottom: 0;
-    padding:40px 0;
-  }
-  
-  .footer .social {
-    padding-bottom: 25px;
-  }
-  
-  .social a{
-    font-size: 25px;
-    width: 30px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-  }
-  
-  .social a:hover{
-    opacity: 0.9;
-  }
-  
-  .col ul {
-    padding:40px;
-    list-style: none;
-    font-size: 20px;
-    line-height: 2;
-  }
-  
-  .col ul li a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
 
 }
 
 
 @mixin respond-between($lower, $upper) {
 
-    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
   
-      $lower-breakpoint: map-get($breakpoints, $lower);
-      $upper-breakpoint: map-get($breakpoints, $upper);
-  
-      @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
-        @content;
-      }
-    
-    } @else {
-  
-      @if (map-has-key($breakpoints, $lower) == false) {
-  
-        @warn 'Your lower breakpoint was invalid: #{$lower}.';
-      }
-  
-      @if (map-has-key($breakpoints, $upper) == false) {
-  
-        @warn 'Your upper breakpoint was invalid: #{$upper}.';
-      }
+  } @else {
+
+    @if (map-has-key($breakpoints, $lower) == false) {
+
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+
+    @if (map-has-key($breakpoints, $upper) == false) {
+
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
     }
   }
+}
 
-  @include respond-between(sm, xxl) {
-    .container .card{
-      width: 100%;
-      height: 100%;
-      transition: transform 1500ms;
-      transform-style: preserve-3d
-    }
+@include respond-between(sm, xxl) {
 
-    .container:hover > .card{
-      cursor: pointer;
-      transform: rotateY("180deg");
-    }
-    
-    .container .card .front, .back {
-      height: 100%;
-      width: 100%;
-      border-radius: 2rem;
-      box-shadow: 0 0 5px 2px rgb(50, 50, 0);
-      position: absolute;
-      backface-visibility: hidden;
-    }
-    
-    .container .card .front {
-      background-image: url("/dist/images/covered book.jpg");
-      background-repeat: no-repeat;
-      background-size: 350px 500px;
-    }
-    
-    .container .card .back {
-      background-color: white;
-      transform: rotateY('180deg');
-    }
-   
-    .carousel-slide .carousel-inner .carousel-item .card {
-      margin:  0 .5em;
-      height: 350px;
-      width: 200px;
-    }
+}
 
-    .cards-wrapper .card{
-        display: flex;
 
-    }
 
-    .card-img-top{
-        display: flex;
 
-    }
-    .footer {
-      position: absolute;
-      bottom: 0;
-      padding:40px 0;
-    }
-    
-    .footer .social {
-      padding-bottom: 25px;
-    }
-    
-    .social a{
-      font-size: 25px;
-      width: 30px;
-      height: 40px;
-      line-height: 40px;
-      display: inline-block;
-    }
-    
-    .social a:hover{
-      opacity: 0.9;
-    }
-    
-    .col ul {
-      padding:40px;
-      list-style: none;
-      font-size: 20px;
-      line-height: 2;
-    }
-    
-    .col ul li a {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-    
-    }
-
- 
-  
