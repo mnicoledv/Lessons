@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+  }
+
+  body {
+    background: wheat;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+content-section {
+    float: left;
+    width: 55%;
+
+}
+
+image-section {
+    float: right;
+    width: 40%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+image-section img{
+    height: auto;
+    width: 100%;
+}
+
+content h1{
+    text-transform: uppercase;
+    font-size: 50px;
+    color: black
+}
+
+content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 25px;
+}
+
+content p{
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    }
+  
+  .footer .social {
+  padding-bottom: 25px;
+  }
+  
+  .social a{
+  font-size: 25px;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  }
+  
+  .social a:hover{
+  opacity: 0.9;
+  }
+  
+  .col ul {
+  padding:40px;
+  list-style: none;
+  font-size: 20px;
+  line-height: 2;
+  }
+  
+  .col ul li a {
+  color: inherit;
+  text-decoration: none;
+  }
+
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+
+
+$breakpoint: map-get($breakpoints, sm); // Get the small breakpoint.
+
+$breakpoint: map-get($breakpoints, md); // Get the medium breakpoint.
+
+$breakpoint: map-get($breakpoints, lg); // Get the large breakpoint.
+
+$breakpoint: map-get($breakpoints, xl); // Get the xlarge breakpoint.
+
+$breakpoint: map-get($breakpoints, xxl); // Get the extra extra large breakpoint.
+
+
+@mixin respond-above($breakpoint) { 
+  
+  //respond above - breakpoints above designated value
+  //respond below - breakpoints below designated value
+
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+  
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+  
+    } @else {
+  
+  
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+
+  @include respond-above(sm) {
+    
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+  }
+
+  body {
+    background: wheat;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
+  }
+    
+.section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
+}
+
+.container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section {
+    float: left;
+    width: 55%;
+
+}
+
+.image-section {
+    
+    width: 40%;
+}
+
+.image-section img{
+    float: right;
+    height: auto;
+    width: 100%
+}
+
+content h1{
+    
+    text-transform: uppercase;
+    font-size: 50px;
+    color: black;
+}
+
+content h3{
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 25px;
+}
+
+content p{
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    }
+
+  .container .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+
+  
+  }
+
+@mixin respond-below ($breakpoint){
+
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+
+  } @else {
+
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+@include respond-below(lg) {
+
+}
+
+
+@mixin respond-between($lower, $upper) {
+
+    @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+  
+      $lower-breakpoint: map-get($breakpoints, $lower);
+      $upper-breakpoint: map-get($breakpoints, $upper);
+  
+      @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+        @content;
+      }
+    
+    } @else {
+  
+      @if (map-has-key($breakpoints, $lower) == false) {
+  
+        @warn 'Your lower breakpoint was invalid: #{$lower}.';
+      }
+  
+      @if (map-has-key($breakpoints, $upper) == false) {
+  
+        @warn 'Your upper breakpoint was invalid: #{$upper}.';
+      }
+    }
+  }
+
+  @include respond-between(sm, xxl) {
+
+  }
+  
+
+
+
