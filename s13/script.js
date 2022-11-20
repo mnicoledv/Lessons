@@ -52,7 +52,7 @@ console.log(100%3); //1 - remainder
 //Increment (++) and Decrement (--)
 
 let c = 30;
-console.log(++c); //31
+console.log(c-- , "ten"); //31
 
 //(++) adds 1
 
