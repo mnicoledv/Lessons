@@ -54,3 +54,30 @@ function calculateKm(meter) {
     return(km);
 }
 alert(calculateKm(meter));
+
+
+//nested if else statement 
+
+let grades= prompt("Grade");
+
+function myGrade (grades){
+      if(grades >100 || grades <0){
+            alert ("Please input correct grade")
+      }
+      else{
+            if (grades >= 90){
+                  alert("Outstanding");
+            }
+            else if (grades >=80){
+                  alert("Good");
+            }
+            else if (grades >= 75){
+                  alert("Needs improvement");
+            }
+            else{
+
+                  alert ("Keep Studying")
+            }        
+      }
+}
+myGrade (grades)

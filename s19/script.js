@@ -111,3 +111,21 @@ introduce_2(firstName, middleName, lastName);
 let students = ["John", "Jane", "Judy"];
 
 let result = students.forEach(students => console.log(students));
+
+
+//ANSWER TO THE ACTIVITY 
+
+class Weight {
+    constructor (name, kg){
+        this.name = name;
+        this.kilograms = kg;
+        this.pounds = kg * 2.2;
+        this.convertedWeight = function (){
+            console.log(`${this.name}'s weight in lbs is ${this.pounds}`);
+        }
+    }
+}
+
+let poundsWeight = new Weight ("Jelly, 60");
+pounds.Weight.convertedWeight();
+
