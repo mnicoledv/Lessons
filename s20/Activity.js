@@ -10,15 +10,15 @@ addbutton.addEventListener("click", () => {
 
         if(userInput.length > 5)
         {
-            let li = document.createElement("li");
-            li.className="todo";
+           let li = document.createElement("li");
+           li.className="items";
             
             let checkbox = document.createElement("input");
             checkbox.type ="checkbox";
             checkbox.value =1;
-            checkbox.id= "todo"
+            checkbox.id= "todo1";
             li.appendChild(checkbox);
-
+            checkbox.className = "todo";
             let node = document.createTextNode(userInput);
             li.appendChild(node);
 
@@ -40,12 +40,12 @@ delbutton.addEventListener("click", () => {
         todo[i] = todo[i].selected;
      */
         let items = document.getElementsByClassName("todo");
+        let item = document.getElementsByClassName("items");
         for(i=0; i< items.length;i++){
-           
-            if(items[i].id.checked)
-            console.log(items[i].id.checked);
-            {
-            items.remove(items[i]);
+            //console.log(items[i].id);
+            if(items[i].checked == true)
+            { console.log(items[i].id);
+            item[i].remove();
             i--;
             }
         }
