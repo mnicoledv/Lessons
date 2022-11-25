@@ -116,3 +116,148 @@ class linkedList {
     }
     
 }
+
+//insert an element at the position index of the list
+
+insertAt(element,index){
+    if(index < 0 || index > this.size){
+        return console.log("Please enter a vaild index");
+    };
+    else {
+        //create a new node 
+        let node = new Node (element);
+        let curr,prev;
+
+        curr = this.head;
+
+        //add elements to the first index
+
+        if(index == 0){
+            node.next = this.head;
+            this.head = node;
+
+        }
+        else{
+            curr = this.head; let it = 0; // means iterate
+            
+            //iterate over the first to find the position insert.
+            while(it < index){
+                it++;
+                prev =curr
+                curr = curr.next;
+
+                //adding an element
+                node.next = curr;
+                prev.next = node;
+        
+            }
+
+            this.size++
+        
+        }
+
+
+    }
+
+    //remove an element from the specified location
+
+    removeFrom(index){
+        if(index < 0 || index >= this.size){
+            return console.log("Please enter a valid index");
+        }
+        else{
+            let curr,prev, it = 0;
+
+            curr = this.head;
+            prev = curr;
+            
+
+            //deleting first element
+
+            if (index === 0){
+                this.head =curr.next;
+            }
+            else{
+                //iterate over the list to the position to remove an element
+                while (it < index){
+                    it++;
+                    prev = curr;
+                    curr = curr;
+                    next;
+                }
+
+                //remove the element
+                prev.next = curr.next;
+            }
+            this.size--;
+            //return the removed element
+
+            return curr.element;
+        }
+    }
+        
+    removeElement(element){
+        let current = this.head;
+        let prev = null;
+
+        //loop over the list
+
+        while (current != null){
+            //compare element with the current element
+            //if the element is found then we need to remove and return as true
+
+        if(current.element === element){
+            if (prev === null){
+                this.head = current.next;
+            }
+            else{
+                prev.netx = current.next;
+            }
+        }
+        this.size--;
+        return current.element;
+        }
+        return -1;
+    }
+
+    indexOf(e){
+        let count = 0;
+        let current = this.head;
+
+        //loop over the list
+
+        while (current != null){
+            //compare each element to the list within the given elements
+
+            if(current.e === e){
+                return count;
+            }
+            count++;
+            current = current.next;
+        }
+
+        //if the index is not found
+        return -1;
+        
+    }
+    //checking if the list is empty
+    isEmpty(){
+        return this.size == 0;
+    }
+
+    //give the size ofthe list
+    size of list(){
+        console.log(this.size);
+    }
+    //printing the list of items
+    printList(){
+        let curr = this.head;
+        let str = "";
+        while (curr){
+            str+= curr.element + "";
+            curr = cuur.next;
+        }
+        console.log(str);
+    }
+}
+

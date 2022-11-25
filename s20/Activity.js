@@ -2,29 +2,56 @@ console.log("connected");
 
 let addbutton = document.querySelector("#addbutton");
 let todoWrapper = document.querySelector(".todo-wrapper");
-
+//<ul class="todo-wrapper"></ul>
 
 addbutton.addEventListener("click", () => {
    
         let userInput = document.querySelector("#userInput").value;
-
+        //let userInput = <input type="text" id="userInput">.value;
+        //String.length
+        //input = ['i','n','p','u','t']
+        // 6 > 5
         if(userInput.length > 5)
         {
-           let li = document.createElement("li");
-           li.className="items";
-            
+            let li = document.createElement("li");
+            // <li></li>
+            li.className="items";
+            // <li class="items"></li>
             let checkbox = document.createElement("input");
-            checkbox.type ="checkbox";
-            checkbox.value =1;
-            checkbox.id= "todo1";
-            li.appendChild(checkbox);
-            checkbox.className = "todo";
-            let node = document.createTextNode(userInput);
-            li.appendChild(node);
+            // <input>
 
+            checkbox.type ="checkbox";
+            // <input type="checkbox">
+            checkbox.value =1;
+            // <input type="checkbox" value=1>
+            checkbox.id= "todo1";
+            // <input type="checkbox" value=1 id="todo1">
+            
+            li.appendChild(checkbox);
+            /* <li class="items">
+                <input type="checkbox" value=1 id="todo1">
+                </li>
+            */
+            checkbox.className = "todo";
+            // <input type="checkbox" value=1 id="todo1" class="todo">
+            let node = document.createTextNode(userInput);
+            console.log("node: "+ node);
+            li.appendChild(node);
+            /* <li class="items">
+                <input type="checkbox" value=1 id="todo1" class="todo">
+                userInput
+                </li>
+            */
             todoWrapper.appendChild(li);
-            document.querySelector("#userInput").value="";
- 
+            /*<ul class="todo-wrapper mt-5" style="list-style-type:none;">
+                <li class="items">
+                    <input type="checkbox" value=1 id="todo1" class="todo">
+                    userInput
+                </li>    
+            </ul>
+            */
+            document.querySelector("#userInput").value = "";
+            // empties out the userInput object 
         }
 
         else
@@ -39,14 +66,23 @@ delbutton.addEventListener("click", () => {
     /*for (let i=0; i < todo.length; i++){
         todo[i] = todo[i].selected;
      */
+        //let items = document.getElementsByClassName("todo");
         let items = document.getElementsByClassName("todo");
+        // items = [<input class="todo">,<input class="todo">,<input class="todo">]
         let item = document.getElementsByClassName("items");
-        for(i=0; i< items.length;i++){
+        // item = [<li class="items"></li>,<li class="items"></li>,<li class="items"></li>]
+        for(i = 0; i < items.length; i++){
+            /* 
+            items[0]
+            items[1]
+            items[2]
+            */
             //console.log(items[i].id);
             if(items[i].checked == true)
-            { console.log(items[i].id);
-            item[i].remove();
-            i--;
+            {
+                //console.log(items[i].id);
+                item[i].remove();
+                i--;
             }
         }
 /*

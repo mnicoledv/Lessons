@@ -93,8 +93,23 @@ while (count > 0){
       count--;
 }
 */
-/* EXCERCISE (attempt)
-let count = 20;
+// EXCERCISE (attempt)
+
+function num(){
+      prompt("Enter a number from 0 to 20");
+
+      for (num; num >= 0; count--);{
+            prompt(`Currently at number ${num}`)
+      }
+}
+
+/*
+let 
+let num = 20;
+      for (num; num >= 0; count--);{
+
+
+      }
       prompt("ENTER VALUES FROM 0 TO 20");
 
       function counter (count){
@@ -106,7 +121,7 @@ let count = 20;
             if (count )
       }
 counter(count);
-*/
+
 
 //SOLUTION A:
 
@@ -127,4 +142,4 @@ for (b; b >= 0; b--){
                   }
             }
       }
-counting (userInput)
+counting (userInput)*/
