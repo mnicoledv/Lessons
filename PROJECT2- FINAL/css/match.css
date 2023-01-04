@@ -7,7 +7,7 @@
     text-decoration: none;
     transition: all 0.2s linear;
   }
-
+  
   html{
     font-size: 62.5%;
     overflow-x:hidden;
@@ -27,18 +27,8 @@
     font-weight: bolder;
 }
 
-.icons div{
-    height: 4.5rem;
-    width: 2.5rem;
-    line-height: 4.5rem;
-    border-radius: .5rem;
-    font-size: 1rem;
-    margin-right: .3rem;
-    float: left;
-}
-
   body {
-    background: linear-gradient(120deg,#f0f1ec,#f5deb3)
+    background: linear-gradient(120deg,#f0f1ec,#f5deb3)wheat;
   }
   
   .container .row {
@@ -107,6 +97,10 @@
       outline: none;
       border: none;
       text-decoration: none;
+      transition: all 0.2s linear;
+    }
+    body {
+      background: linear-gradient(120deg,#f0f1ec,#f5deb3);
     }
     .nav-item {
       display: flex;
@@ -114,25 +108,39 @@
       font-size: 30px;
       padding: 5px;
     }
-
-    .icons div{
-      height: 4.5rem;
-      width: 2.5rem;
-      line-height: 4.5rem;
-      font-size: 3rem;
-      margin-right: 3rem;
-      float: right;
-  }
-
-    body {
-      background: linear-gradient(120deg,#f0f1ec,#f5deb3);
+    .d-flex {
+      justify-content: space-between;
     }
-    body .footer {
+    .card-group {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .card {
+      display: block;
+      height: auto;
+      box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      background: white;
+      cursor: pointer;
+    }
+    .card img {
+      height: 500px;
+    }
+    .card img:hover {
+      transform: scale(0.9);
+    }
+    .contact-info {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .footer {
       position: relative;
       bottom: 0;
       width: 100%;
     }
-    body .container .row {
+    .container .row {
       display: flex;
       flex-direction: row;
     }

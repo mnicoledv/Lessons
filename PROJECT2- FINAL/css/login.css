@@ -1,3 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .logo{
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.icons div{
+    height: 4.5rem;
+    width: 2.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    margin-right: .3rem;
+    float: left;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -105,3 +137,43 @@ input[type="submit"]:hover{
 .signup_link a:hover{
     text-decoration: underline;
 }
+
+@media (min-width: 576px) {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 30px;
+      padding: 5px;
+    }
+
+    .icons div{
+      height: 4.5rem;
+      font-size: 5rem;
+      width: 2.5rem;
+      line-height: 4.5rem;
+      font-size: 3rem;
+      margin-right: 3rem;
+      float: right;
+  }
+
+    body {
+      background: linear-gradient(120deg,#f0f1ec,#f5deb3);
+    }
+    body .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    body .container .row {
+      display: flex;
+      flex-direction: row;
+    }
+  }

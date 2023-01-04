@@ -18,6 +18,15 @@
     font-size: 30px;
     padding: 5px;
   }
+
+  .icons div{
+    height: 4rem;
+    width: 1rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    margin-right: 3rem;
+    float: right;
+  }
   
   .container .row {
     display: flex;
@@ -74,6 +83,16 @@
       font-size: 30px;
       padding: 5px;
     }
+
+    .icons div{
+      height: 4rem;
+      width: 1rem;
+      line-height: 4.5rem;
+      font-size: 2rem;
+      margin-right: 3rem;
+      float: right;
+    }
+
     .about-1 {
       margin: 30px;
       padding: 5px;
@@ -146,8 +165,18 @@
       flex-direction: row;
     }
   }
-  @media (max-width: 1399px) {
+
+  @media (max-width: 500px) {
     .contact-info {
       flex-direction: column;
     }
+    .icons div{
+      height: 1rem;
+      width: 1rem;
+      line-height: .3rem;
+      font-size: 1rem;
+      margin-right: 1rem;
+      float: right;
+  }
+
   }

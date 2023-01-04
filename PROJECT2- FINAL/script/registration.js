@@ -7,12 +7,13 @@ let registerForm = document.getElementById("registerUser");
 registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let firstName = document.getElementById('fname').value;
-    let lastName = document.getElementById ('lname').value;
+    let firstName = document.getElementById('firstName').value;
+    let lastName = document.getElementById ('lastName').value;
     let emailAdd = document.getElementById('emailAdd').value;
-    let mobile = document.getElementById('mobileNo').value;
     let password =  document.getElementById('password').value;
-
+    let mobile = document.getElementById('mobileNo').value;
+    let address = document.getElementById('address').value;
+    
     if (password && mobile === 11) {
         fetch ("http://localhost:4000/api/users/email-exists", {
             method: "POST",
@@ -35,11 +36,12 @@ registerForm.addEventListener("submit", (event) => {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        firstName: fname,
-                        lastName: lname,
+                        firstName: firstName,
+                        lastName: lastName,
                         emailAdd: emailAdd,
+                        password: password,
                         mobile: mobileNo,
-                        password: password
+                        address: address
                     })
                 })
                 .then(res => res.json())

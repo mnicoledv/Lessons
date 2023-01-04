@@ -99,6 +99,16 @@
       font-size: 30px;
       padding: 5px;
     }
+
+    .icons div{
+      height: 4rem;
+      width: 1rem;
+      line-height: 4.5rem;
+      font-size: 2rem;
+      margin-right: 3rem;
+      float: right;
+    }
+
     .contact-info {
       display: flex;
       width: 100%;
@@ -136,4 +146,14 @@
     .contact-info {
       flex-direction: column;
     }
+
+    .icons div{
+      height: 4rem;
+      width: 1rem;
+      line-height: 4.5rem;
+      font-size: 2rem;
+      margin-right: 3rem;
+      float: right;
+    }
+
   }

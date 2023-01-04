@@ -9,7 +9,7 @@
   }
   
   body {
-    background: linear-gradient(120deg,#f0f1ec,#f5deb3);
+    background: wheat;
   }
   
   .nav-item {
@@ -29,28 +29,53 @@
   }
 
   
-  .container .row {
-    display: flex;
-    flex-direction: column;
+  .section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ddd;
   }
   
-  .card-group {
-    margin: 0 auto;
-    padding: 3rem 2rem;
+  container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
   }
   
-  .card {
-    display: flex;
-    justify-content: center;
-    width: 350px;
-    padding: auto;
-    margin-bottom: 5px;
-    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    background: white;
+  content-section {
+    float: left;
+    width: 55%;
   }
   
-  .card img {
-    height: 450px;
+  image-section {
+    float: right;
+    width: 40%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+  
+  image-section img {
+    height: auto;
+    width: 100%;
+  }
+  
+  content h1 {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: black;
+  }
+  
+  content h3 {
+    margin-top: 20px;
+    color: #5d5d5d;
+    font-size: 25px;
+  }
+  
+  content p {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
   }
   
   .footer {
@@ -98,7 +123,7 @@
       transition: all 0.2s linear;
     }
     body {
-      background: linear-gradient(120deg,#f0f1ec,#f5deb3);
+      background: wheat;
     }
     .nav-item {
       display: flex;
@@ -116,33 +141,44 @@
       float: right;
     }
 
-    .d-flex {
-      justify-content: space-between;
-    }
-    .card-group {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 2rem;
-    }
-    .card {
-    
-      display: block;
-      height: auto;
-      box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
-      background: white;
-      cursor: pointer;
-    }
-    .card img {
-      height: 500px;
-    }
-    .card img:hover {
-      transform: scale(0.9);
-    }
-    .contact-info {
-      display: flex;
+    .section {
       width: 100%;
-      align-items: center;
-      justify-content: center;
+      min-height: 100vh;
+      background-color: #ddd;
+    }
+    .container {
+      width: 80%;
+      display: block;
+      margin: auto;
+      padding-top: 100px;
+    }
+    .content-section {
+      float: left;
+      width: 55%;
+    }
+    .image-section {
+      width: 40%;
+    }
+    .image-section img {
+      float: right;
+      height: auto;
+      width: 100%;
+    }
+    content h1 {
+      text-transform: uppercase;
+      font-size: 50px;
+      color: black;
+    }
+    content h3 {
+      margin-top: 20px;
+      color: #5d5d5d;
+      font-size: 25px;
+    }
+    content p {
+      margin-top: 20px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 17px;
+      line-height: 1.5;
     }
     .footer {
       position: relative;
