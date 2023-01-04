@@ -1,0 +1,19 @@
+.wrapper .form .input_field .btn{
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #8b5c38;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+/*
+.wrapper .form .input_field:last-child{
+    margin-bottom: 0;
+}
+*/
+.wrapper .form .input_field .btn:hover{
+    background: #866042;
+}
