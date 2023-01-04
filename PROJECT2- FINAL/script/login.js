@@ -1,3 +1,5 @@
+console.log("Connected");
+
 function checkPassword (){
     let password = document.getElementById
     ("password").value;
