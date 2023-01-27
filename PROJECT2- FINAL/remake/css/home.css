@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #f0f1ec;
+}
+
+.header{
+    width: 100%;
+    background-image: url('..\pages\bnr1.png');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    margin: auto;
+    height: 100px;
+    width: 120px;
+    text-align: center;
+}
+.nav-links{
+    flex: 2;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 6px 10px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #866042;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #866042;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.banner{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* button */
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #866042;
+    padding: 12px 34px;
+    font-size: 35px;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.hero-btn:hover{
+    color: #f0f1ec;
+    border: 1px solid #866042;
+    background: #866042;
+    transition: 1s;
+}
