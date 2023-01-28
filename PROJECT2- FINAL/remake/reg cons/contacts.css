@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+    background: transparent;
+}
+
+.header{
+    min-height: 0vh;
+    width: 100%;
+    background-color: #f0f1ec;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 0;
+    padding-left: 10%;
+    padding-right: 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    margin: auto;
+    height: 100px;
+    width: 120px;
+    text-align: center;
+}
+.nav-links{
+    flex: 2;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 6px 10px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #866042;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #866042;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+/* echos */
+.nav-item {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .icons div{
+    height: 4rem;
+    width: 1rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    margin-right: 3rem;
+    float: right;
+  }
+  
+  .container .row {
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    margin: auto;
+  }
+  
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer .social {
+    padding-bottom: 25px;
+  }
+  
+  .social a {
+    font-size: 25px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+  }
+  
+  .social a:hover {
+    opacity: 0.9;
+  }
+
+  .col ul {
+    padding: 40px;
+    list-style: none;
+    font-size: 20px;
+    line-height: 2;
+  }
+  
+  .col ul li a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      background: linear-gradient(180deg,#f0f1ec,#866042);
+      min-height: 100vh;
+      display: block;
+      padding: auto;
+      margin: auto;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 30px;
+      padding: 5px;
+    }
+
+    .icons div{
+      height: 4rem;
+      width: 1rem;
+      line-height: 4.5rem;
+      font-size: 2rem;
+      margin-right: 3rem;
+      float: right;
+    }
+
+    .about-1 {
+      margin: 30px;
+      padding: 5px;
+    }
+    .about-1 h1 {
+      text-align: center;
+    }
+    .about-1 p {
+      text-align: center;
+      padding: 3px;
+      font-size: 30px;
+    }
+    .about-item {
+      height: 350px;
+      width: auto;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 80px, 30px;
+      background-color: white;
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+    }
+    .about-item i {
+      font-size: 43px;
+      margin: 0;
+    }
+    .about-item h3 {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    .about-item hr {
+      width: 46px;
+      height: 3px;
+      background-color: linear-gradient(120deg,#f0f1ec,#866042);
+      margin: 0 auto;
+      border: none;
+    }
+    .about-item p {
+      margin-top: 20px;
+    }
+    .about-item:hover .bi {
+      background: none;
+      color: #866042;
+      transform: scale(1);
+    }
+    .contact-info {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .card p {
+      margin-top: 20px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      max-height: 0;
+      opacity: 0;
+      transition: 0.3 linear;
+    }
+    .card:hover p {
+      max-height: 40px;
+      opacity: 1;
+    }
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .container .row {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .contact-info {
+      flex-direction: column;
+    }
+    .icons div{
+      height: 1rem;
+      width: 1rem;
+      line-height: .3rem;
+      font-size: 1rem;
+      margin-right: 1rem;
+      float: right;
+  }
+  }

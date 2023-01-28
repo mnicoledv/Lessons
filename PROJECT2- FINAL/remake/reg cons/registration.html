@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="..\css\reg.css">
+        <title>Registration Form</title>
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+              <img src="..\img\marion logo.png">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="..\pages\home.html">HOME</a></li>
+                        <li><a href="..\pages\about.html">ABOUT</a></li>
+                        <li><a href="#">STORE</a></li>
+                        <li><a href="..\pages\contacts.html">CONTACTS</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+        <div class="wrapper">
+            <div class="title">
+                Registration Form
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <label>First Name</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input_field">
+                    <label>Last Name</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input_field">
+                    <label>Password</label>
+                    <input type="password" id="password" class="input">
+                </div>
+                <div class="input_field">
+                    <label>Confirm Password</label>
+                    <input type="password" id="confrm-password" class="input">
+                </div>
+                <p id="message"></p>
+                <input type="button" onclick="checkPassword()" value="SUBMIT"/>
+
+                <script src="..\script\reg.js"></script>
+
+                <!--gender
+                <div class="input_field">
+                    <label>Gender</label>
+                    <div class="custom_select">
+                        <select>
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                -->
+                <div class="input_field">
+                    <label>Email Address</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input_field">
+                    <label>Phone Number</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input_field">
+                    <label>Address</label>
+                    <textarea class="textarea"></textarea>
+                </div>
+                <div class="input_field">
+                    <label>Postal Code</label>
+                    <input type="text" class="input">
+                </div>
+                <div class="input_field terms">
+                    <label class="check">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <!-- insert link -->
+                    <a href="#"><p>Agree to terms and conditions</p></a>
+                </div>
+                <div class="input_field">
+                    <!--insert link login page-->
+                    <a href="login.html"><input type="submit" value="Register" class="btn"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
